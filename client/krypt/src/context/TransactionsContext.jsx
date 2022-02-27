@@ -83,7 +83,7 @@ export const TransactionProvider = ({ children }) => {
             console.log("loading")
             console.log(transactionHash.hash);
             await transactionHash.wait();
-            setIsLoading(true);
+            setIsLoading(false);
             console.log("success")
             console.log(transactionHash.hash);
 
@@ -101,7 +101,8 @@ export const TransactionProvider = ({ children }) => {
     }, [])
 
     return (
-        <TransactionContext.Provider value={{ connectWallet, currentAccount, formData, setFormData, handleChange, sendTransactions }}>
+        <TransactionContext.Provider value={{ connectWallet, currentAccount, formData, 
+                                              setFormData, handleChange, sendTransactions, isLoading }}>
             {children}
         </TransactionContext.Provider >
     )
