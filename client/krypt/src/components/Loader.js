@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Loader(props) {
+const Loader = (props) => {
     return (
         <div>
             <div className='flex justify-center items-center p-3'>

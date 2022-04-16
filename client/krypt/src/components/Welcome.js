@@ -3,13 +3,11 @@ import { shortenAddress } from '../utils/shortenAddress';
 import { AiFillPlayCircle } from "react-icons/ai"
 import { SiEthereum } from "react-icons/si"
 import { BsInfoCircle } from "react-icons/bs"
-
 import { TransactionContext } from '../context/TransactionsContext';
-import { Loader } from "./"
+import { Loader } from "."
 
 
 const commonStyles = 'min-h-[70px] sm:px-0 px-2 sm:min-w-[120px] flex justify-center items-center border-[0.5px] border-gray-400 text-sm font-light text-white'
-
 
 const Input = ({ placeholder, name, type, value, handleChange }) => (
     <input type={type}
@@ -101,7 +99,6 @@ const Welcome = () => {
                         <Input placeholder="Message" name="message" type="text" handleChange={handleChange} />
 
                         <div className='h-[1px] w-full bg-gray-400 my-2' />
-
                         {isLoading ? (
                             <Loader />
                         ) : <button
@@ -112,7 +109,6 @@ const Welcome = () => {
                             Send now
                         </button>}
                     </div>
-
                 </div>
             </div>
         </div>

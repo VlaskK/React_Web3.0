@@ -2,13 +2,9 @@ import React, { useContext } from 'react';
 import { TransactionContext } from '../context/TransactionsContext';
 import { shortenAddress } from '../utils/shortenAddress';
 import useFetch from '../hooks/useFetch';
-import { RiH3 } from 'react-icons/ri';
-
-import dummyData from '../utils/dummyData';
 
 const TransactionCard = ({ addressTo, addressFrom, timestamp, message, keyword, amount, url }) => {
     const gifURL = useFetch({ keyword })
-
 
     return (
         <div className='bg-[#181918] m-4 flex flex-1
